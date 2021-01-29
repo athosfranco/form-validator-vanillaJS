@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); /*Similar ao <link> do html*/
+
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+body { 
+    background-image: url(bgimg.jpg); /*Temporário - trocar por img de fundo*/ 
+    background-size: cover;
+    background-repeat: none;    
+    font-family: 'Open Sans', sans-serif;
+    display: flex; /*Ativando o display flex no body, todos seus childs se tornam flex items*/
+    flex-direction: column;
+    align-items: center; /*Centraliza todos os flex items verticalmente*/
+    justify-content: center; /*Centraliza horizontalmente*/
+    min-height: 100vh; /*Faz o body ocupar toda a altura disponível da viewport, pois o mínimo é 100vh*/
+    margin: 0; 
+    
+}
+
+.container {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 2rem;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+
+.form-control input[type="text"] {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.678);
+    padding: 10px 10px 0px 10px;
+    background-color: transparent;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+.form-control input[type="password"] {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.678);
+    padding: 10px 10px 0px 10px;
+    background-color: transparent;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.form-control input:focus {
+    outline: 0;
+}
+
+.error-message {    
+    visibility: hidden;
+}
+
+.form-control.error-visible small { /*SE A FORM-CONTROL POSSUIR A CLASSE 'ERROR-VISIBLE', A MENSAGEM DE ERRO 
+    SE TORNA VISÍVEL*/    
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.form-control.success label { /*SE A FORM-CONTROL POSSUIR A CLASSE 'SUCCESS', O NOME NA LABEL FICA
+    VERDE, INDICANDO VALIDAÇÃO*/
+    color: #4ada08;
+}
+
+.form input[type=submit] {
+    cursor: pointer;
+    background-color: #3498db;
+    border: 2px solid #3498bd;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-top: 1.2rem;
+    width: 100%;
+}
